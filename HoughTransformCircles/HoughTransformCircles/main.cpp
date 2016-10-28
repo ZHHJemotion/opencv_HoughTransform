@@ -41,7 +41,7 @@ int main(int argc, const char * argv[]) {
     
     // 进行霍夫圆变换
     vector<Vec3f> circles;// 定义一个矢量结构circles 用于存放得到的圆矢量集合(圆心坐标x,y,半径r)
-    HoughCircles(dstImage, circles, CV_HOUGH_GRADIENT, 1.5, 50, 200, 100, 0, 0);
+    HoughCircles(dstImage, circles, CV_HOUGH_GRADIENT, 1.5, 150, 200, 100, 0, 0);
     
     // 依次绘制出圆
     for (size_t i = 0; i < circles.size(); i++)
@@ -51,7 +51,7 @@ int main(int argc, const char * argv[]) {
         // 绘制圆心
         circle(dstImage, certer, 3, Scalar(0,255,0),-1, 8, 0);
         // 绘制圆轮廓
-        circle(dstImage, certer, radius, Scalar(155,50,255),3 ,8 ,0);
+        circle(dstImage, certer, radius, Scalar(155,10,255),3 ,8 ,0);
         // void circle(Mat& img, Point center, int radius, const Scalar& color, int thickness=1, int lineType=8, int shift=0
         // Thickness --> Thickness of the circle outline, if positive. Negative thickness means that a filled circle is to be drawn.
     }
