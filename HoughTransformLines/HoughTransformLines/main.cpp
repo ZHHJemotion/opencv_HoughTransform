@@ -1,6 +1,8 @@
 //
 //  main.cpp
-//  HoughTransformLines 霍夫变换要求源图像为8-bit的单通道二进制图像，一般为灰度图
+//  HoughTransformLines 霍夫线变换
+//
+//  霍夫变换要求源图像为8-bit的单通道二进制图像，一般为灰度图
 //
 //  Created by ZHHjemotion on 2016/10/28.
 //  Copyright © 2016年 Lukas_Zhang. All rights reserved.
