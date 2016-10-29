@@ -39,9 +39,10 @@ int main(int argc, const char * argv[]) {
     cvtColor(midImage, dstImage1, CV_GRAY2BGR);
     cvtColor(midImage, dstImage2, CV_GRAY2BGR);// 将边缘检测后的图转化为灰度图
     
+    //定义一个矢量结构lines用于存放得到的线段矢量集合
+    vector<Vec2f> lines1; // Vec2f为2通道 float 型数据，即2个 float 数据
+    vector<Vec4i> lines2; // Vec4i为数据类型，4通道int的型数据，即返回4个int的数据
     //进行霍夫变换
-    vector<Vec2f> lines1;// 定义一个矢量结构lines用于存放得到的线段矢量集合
-    vector<Vec4i> lines2;
     HoughLines(midImage, lines1, 1, CV_PI/180, 150, 0, 0);
     HoughLinesP(midImage, lines2, 1, CV_PI/180, 80, 50, 10);
     
